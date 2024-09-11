@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SiteInstitucionalBandup.Models
-[Table("TrabalheConosco")]
-    public class TrabalheConosco
+[Table("Curriculos")]
+    public class Curriculos
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -15,6 +13,11 @@ namespace SiteInstitucionalBandup.Models
         [Required(ErrorMessage = "O campo nome é de preenchimento obrigatório")]
         public string NomeCompleto { get; set; }
 
+        [Display(Name = "Gênero")]
+        public int GeneroId { get; set; }
+        [ForeignKey("GeneroId")]
+        public Genero Genero { get; set; }
+        
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "O campo CPF é de preenchimento obrigatório")]
         public string Cpf { get; set; }
@@ -25,14 +28,18 @@ namespace SiteInstitucionalBandup.Models
 
         [Display(Name = "Data de Nascimento")]
         [Required(ErrorMessage = "A data de nascimento é de preenchimento obrigatório")]
-        public string DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
+
+        [Display(Name = "Celular")]
+        [Required(ErrorMessage = "O campo celular é de preenchimento obrigatório")]
+        public string Celular { get; set; }
 
         [Display(Name = "Setor desejado")]
-        [Required(ErrorMessage = "A escolha do setor é de preenchimento obrigatório")]
-        public string SetorDesejado { get; set; }
+        public int SetoresId { get; set; }
+        [ForeignKey("SetoresId")]
+        public Setores SetorDesejado { get; set; }
 
         [Display(Name = "Escolaridade")]
-        [Required(ErrorMessage = "A escolaridade é de preenchimento obrigatório")]
         public string Escolaridade { get; set; }
 
         [Display(Name = "Cursos Profissionalizantes")]

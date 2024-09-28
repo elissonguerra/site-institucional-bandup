@@ -1,0 +1,29 @@
+@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+<form action="Login" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" class="form-control">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" asp-for="RememberMe">
+        <label class="form-check-label" asp-for="RememberMe"></label>
+    </div>
+    <input type="hidden" asp-for="ReturnUrl">
+    <input type="submit" value="Entrar" class="btn btn-primary">
+</form>     
+
+@section Script{
+    <partial name="_ValidateonScriptsPartial"></partial>
+}

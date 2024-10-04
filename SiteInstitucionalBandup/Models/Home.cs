@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SiteInstitucionalBandup.Models
+namespace SiteInstitucionalBandup.Models;
 
 [Table("Home")]
     public class Home
@@ -15,15 +15,15 @@ namespace SiteInstitucionalBandup.Models
         public string Banner { get; set; }
 
         [Display(Name = "Quem Somos")]
-        [Required(ErrorMessage = 'Preencha o campo "Quem Somos"')]
+        [Required(ErrorMessage = "Preencha o campo 'Quem Somos'")]
         public string QuemSomos { get; set; }
 
         [Display(Name = "O que fazemos")]
-        [Required(ErrorMessage = 'Preencha o campo "O que fazemos"')]
+        [Required(ErrorMessage = "Preencha o campo 'O que fazemos'")]
         public string OQueFazemos { get; set; }
 
     
         [Display(Name = "Objetivos")]
-        [Required(ErrorMessage = 'Preencha o campo "Objetivos"')]
+        [Required(ErrorMessage = "Preencha o campo 'Objetivos'")]
         public string Objetivos { get; set; }
     }

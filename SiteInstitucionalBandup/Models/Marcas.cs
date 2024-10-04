@@ -1,14 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SiteInstitucionalBandup.Models
+namespace SiteInstitucionalBandup.Models;
 
 [Table("Marcas")]
     public class Marcas
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Nome da Marca")]
         [Required(ErrorMessage = "Insira o nome da marca")]
@@ -21,4 +21,5 @@ namespace SiteInstitucionalBandup.Models
         [Display(Name = "Imagem")]
         [Required(ErrorMessage = "Insira a imagem")]
         public string Imagem { get; set; }
+        
     }

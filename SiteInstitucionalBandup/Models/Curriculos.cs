@@ -1,13 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace SiteInstitucionalBandup.Models
+namespace SiteInstitucionalBandup.Models;
+
 [Table("Curriculos")]
     public class Curriculos
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Nome Completo")]
         [Required(ErrorMessage = "O campo nome é de preenchimento obrigatório")]

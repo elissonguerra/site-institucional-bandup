@@ -5,6 +5,6 @@ namespace SiteInstitucionalBandup.Models;
 
     public class Setores
     {
-        public Id { get; set; }
+        public int Id { get; set; }
         public string Setor { get; set; }
     }

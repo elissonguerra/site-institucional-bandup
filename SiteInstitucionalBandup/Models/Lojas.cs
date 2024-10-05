@@ -8,7 +8,7 @@ namespace SiteInstitucionalBandup.Models;
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Nome da Loja")]
         [Required(ErrorMessage = "Insira o nome da loja")]

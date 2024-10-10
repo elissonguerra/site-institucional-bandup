@@ -1,7 +1,21 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using SiteInstitucionalBandup.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+string conn = builder.Configuration.GetConnectionString("Cosmos");
+var version = ServerVersion.AutoDetect(conn);
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseMySql(conn, version));
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+    opt => opt.SignIn.RequireConfirmedAccount = false
+)
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();
 
 var app = builder.Build();
 

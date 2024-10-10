@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SiteInstitucionalBandup.Models;
 
 [Table("Lojas")]
-    public class Lojas
+    public class Loja
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

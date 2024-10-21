@@ -1,10 +1,9 @@
 Criar o painel administrativo com os arquivos e pastas abaixo
 
-service
-view models - login, registro e usuário
-layout
-controllers
-admin
-account
-
-referência = GCook
+helpers - ok
+service - ok
+view models - login, registro e usuário - ok
+layout - ok
+controllers - ok
+admin - ok
+account - ok

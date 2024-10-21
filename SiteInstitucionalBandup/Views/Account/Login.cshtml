@@ -1,29 +1,48 @@
-@model LoginVM
+@model SiteInstitucionalBandup.ViewModels.LoginVM
 @{
     ViewData["Title"] = "Login";
+    ViewData["SubTitle"] = "Entrar";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
 }
 
-<h2>Login</h2>
-<form action="Login" method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="mb-3">
-        <label asp-for="Email" class="form-label"></label>
-        <input asp-for="Email" class="form-control">
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Password" class="form-label"></label>
-        <input asp-for="Password" class="form-control">
-        <span asp-validation-for="Password" class="text-danger"></span>
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" asp-for="RememberMe">
-        <label class="form-check-label" asp-for="RememberMe"></label>
-    </div>
-    <input type="hidden" asp-for="ReturnUrl">
-    <input type="submit" value="Entrar" class="btn btn-primary">
-</form>     
+<form class="form-signin" method="post">
+    <div asp-validation-summary="ModelOnly" hidden></div>
+    <input type="hidden" asp-for="UrlRetorno">
 
-@section Script{
-    <partial name="_ValidateonScriptsPartial"></partial>
+    <div class="form-floating mb-3">
+        <input asp-for="Email" class="form-control">
+        <label asp-for="Email"></label>
+        <span asp-validation-for="Email" class="text-danger text-sm"></span>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="Senha" class="form-control">
+        <label asp-for="Senha"></label>
+        <span asp-validation-for="Senha" class="text-danger text-sm"></span>
+    </div>
+    <div class="mb-3 form-check text-white">
+        <input type="checkbox" class="form-check-input" asp-for="Lembrar">
+        <label class="form-check-label" asp-for="Lembrar"></label>
+    </div>
+    <button class="btn btn-lg w-100 btn-danger" type="submit">Entrar</button>
+</form>
+<p class="mt-3 mb-3 text-white text-center">
+    Ainda não possui uma conta?
+    <a asp-action="Registro" class="text-white fw-bold text-decoration-none">
+        Registre-se aqui
+    </a>
+</p>
+
+@section Scripts {
+    <script type="text/javascript">
+        let mensagemErro = '';
+        $(".validation-summary-errors ul li").each(function () {
+            mensagemErro += $(this).text() + '<br/>';
+        });
+        if (mensagemErro != '')
+            swal.fire(
+                'Acesso Negado',
+                mensagemErro,
+                'error'
+            );
+    </script>
 }

@@ -1,5 +1,48 @@
 @{
-    ViewData["Title"] = "Dashboard";
+    ViewData["Title"] = "Área Administrativa";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
+<div class="jumbotron jumbotron-fluid pt-3">
+    <div class="container">
+        <h1 class="display-4">Área Administrativa</h1>
+        <p class="lead">Seja bem vindo Administrador! Utilize o menu lateral ou botões abaixo ter
+            acesso aos diferentes cadastros do portal!</p>
+        <hr class="my-4">
 
-<h1>Área Administrativa</h1>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a class="btn btn-dark p-0" asp-action="Index" asp-controller="Receitas">
+                    <div class="card bg-danger text-white">
+                        <img src="/img/categorias/1.jpg" class="w-100 rounded-top-2" alt="Receitas">
+                        <div class="card-body">
+                            <h5 class="card-title">Receitas</h5>
+                            <p class="card-text">Cadastradas: 1</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-dark p-0" asp-action="Index" asp-controller="Ingredientes">
+                    <div class="card bg-danger text-white">
+                        <img src="/img/categorias/1.jpg" class="w-100 rounded-top-2" alt="Ingredientes">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingredientes</h5>
+                            <p class="card-text">Cadastrados: 14</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-dark p-0" asp-action="Index" asp-controller="Categorias">
+                    <div class="card bg-danger text-white">
+                        <img src="/img/categorias/1.jpg" class="w-100 rounded-top-2" alt="Categorias">
+                        <div class="card-body">
+                            <h5 class="card-title">Categorias</h5>
+                            <p class="card-text">Cadastradas: 12</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

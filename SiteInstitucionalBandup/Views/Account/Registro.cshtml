@@ -1,0 +1,117 @@
+@model SiteInstitucionalBandup.ViewModels.RegistroVM
+@{
+    ViewData["Title"] = "Registro";
+    ViewData["SubTitle"] = Model.Enviado ? "Conta Criada com Sucesso" : "Criar Conta";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+@if (!Model.Enviado)
+{
+    <form class="form-signup" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" hidden></div>
+        <div class="form-floating mb-3">
+            <input asp-for="Nome" class="form-control">
+            <label asp-for="Nome"></label>
+            <span asp-validation-for="Nome" class="text-danger text-sm"></span>
+        </div>
+        <div class="form-floating mb-3">
+            <input asp-for="Email" class="form-control">
+            <label asp-for="Email"></label>
+            <span asp-validation-for="Email" class="text-danger text-sm"></span>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-7">
+                <div class="form-floating mb-3">
+                    <input asp-for="DataNascimento" class="form-control">
+                    <label asp-for="DataNascimento"></label>
+                    <span asp-validation-for="DataNascimento" class="text-danger text-sm"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Senha" class="form-control">
+                    <label asp-for="Senha"></label>
+                    <span asp-validation-for="Senha" class="text-danger text-sm"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="ConfirmacaoSenha" class="form-control">
+                    <label asp-for="ConfirmacaoSenha"></label>
+                    <span asp-validation-for="ConfirmacaoSenha" class="text-danger text-sm"></span>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-5 cursor-pointer">
+                <img src="~/img/usuarios/no-photo.png" id="PreviewImage" alt="Foto de Avatar" class="w-100 rounded-3"
+                    onclick="changeImage()" />
+                <div hidden>
+                    <input type="file" asp-for="Foto" accept=".jpg,.jpeg,.png,.gif,.jfif" />
+                </div>
+            </div>
+        </div>
+        <div class="col-12 ps-2 mt-2 mb-3">
+            <div class="form-check text-white fs-6">
+                <input class="form-check-input text-danger fs-5" asp-for="Termos" onclick="verificarTermos()" />
+                <label class="form-check-label mt-1" asp-for="Termos">
+                    Eu concordo com os
+                    <a class="text-danger" href="javascript:void(0);">termos e politica de privacidade</a>
+                </label>
+            </div>
+        </div>
+
+        <button class="btn btn-lg w-100 btn-danger" type="submit" id="submit" disabled>Criar Conta</button>
+        <p class="mt-3 mb-3 text-white text-center">
+            Já possui uma conta?
+            <a asp-action="Login" class="text-white fw-bold text-decoration-none">
+                Faça Login Aqui
+            </a>
+        </p>
+    </form>
+}
+else
+{
+    <div class="container">
+        <div class="text-center text-white mb-4">
+            <p class="h5 mb-5">Acesse o email informado para concluir o processo de criação!</p>
+            <a asp-action="Login" asp-controller="Account" class="btn btn-danger text-white">Ir para o Login</a>
+            <a asp-action="Index" asp-controller="Home" class="btn btn-primary text-white">Voltar a página inicial</a>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script type="text/javascript">
+
+        let mensagemErro = '';
+        $(".validation-summary-errors ul li").each(function () {
+            mensagemErro += $(this).text() + '<br/>';
+        });
+        if (mensagemErro != '') {
+            swal.fire(
+                'Acesso Negado',
+                mensagemErro,
+                'error'
+            );
+        }
+
+        function changeImage() {
+            document.querySelector('input[type="file"]').click();
+        }
+
+        window.addEventListener('load', function () {
+            document.querySelector('input[type="file"]').addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    var img = document.getElementById('PreviewImage');
+                    img.src = URL.createObjectURL(this.files[0]);
+                }
+            });
+        });
+
+        function verificarTermos() {
+            let t = document.getElementById("Termos");
+            let s = document.getElementById("submit");
+            t.value = t.checked;
+            if (t.checked) {
+                s.removeAttribute("disabled");
+            } else {
+                s.setAttribute("disabled", true);
+            }
+        }
+    </script>
+}

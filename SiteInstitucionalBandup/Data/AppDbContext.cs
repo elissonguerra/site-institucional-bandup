@@ -24,6 +24,9 @@ public class AppDbContext : IdentityDbContext
     public DbSet<Marca> Marcas { get; set; }
 
     public DbSet<Setor> Setores { get; set; }
+
+    public DbSet<Usuario> Usuarios { get; set; }
+
     
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -33,7 +36,7 @@ public class AppDbContext : IdentityDbContext
 
         var roles = new List<IdentityRole>
         {
-            new IdentityRole { Id = Guid.NewGuid().ToString(), Name = "Admin", NormalizedName = "ADMIN" },
+            new IdentityRole { Id = Guid.NewGuid().ToString(), Name = "Administrador", NormalizedName = "ADMINISTRADOR" },
             new IdentityRole { Id = Guid.NewGuid().ToString(), Name = "Usuário", NormalizedName = "USUÁRIO" }
         };
         builder.Entity<IdentityRole>().HasData(roles); 
@@ -68,6 +71,16 @@ public class AppDbContext : IdentityDbContext
             user.PasswordHash = passwordHasher.HashPassword(user, "@adminadmin");
         }
         builder.Entity<IdentityUser>().HasData(users);
+
+        List<Usuario> usuarios = new(){
+            new Usuario(){
+                UsuarioId = users[0].Id,
+                Nome = "Elisson Guerra",
+                DataNascimento = DateTime.Parse("29/10/1989"),
+                Foto = "/img/usuarios/avatar.png"
+            }
+        };
+        builder.Entity<Usuario>().HasData(usuarios);
 
         var userRoles = new List<IdentityUserRole<string>>
         {

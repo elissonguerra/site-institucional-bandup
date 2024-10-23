@@ -1,21 +1,25 @@
+using SiteInstitucionalBandup.Data;
+using SiteInstitucionalBandup.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using SiteInstitucionalBandup.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
-
-string conn = builder.Configuration.GetConnectionString("Cosmos");
-var version = ServerVersion.AutoDetect(conn);
-builder.Services.AddDbContext<AppDbContext>(opt => opt.UseMySql(conn, version));
-
+string conexao = builder.Configuration.GetConnectionString("Conexao");
+var versao = ServerVersion.AutoDetect(conexao);
+builder.Services.AddDbContext<AppDbContext>(
+    Options => Options.UseMySql(conexao, versao)
+);
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(
-    opt => opt.SignIn.RequireConfirmedAccount = false
+    opt => opt.SignIn.RequireConfirmedEmail = true
 )
 .AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders();
+
+builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IUsuarioService, UsuarioService>();
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 var app = builder.Build();
 
@@ -32,6 +36,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

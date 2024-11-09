@@ -18,7 +18,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Marcas()
     {
         return View();
     }

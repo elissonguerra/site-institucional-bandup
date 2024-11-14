@@ -17,6 +17,9 @@ html,body{
 
 header{
     width: 100%;
+    height: auto;
+    max-width: 2000px;
+    margin: auto;
 }
 
 .menu{
@@ -239,8 +242,7 @@ header{
     display: flex;
     position: fixed;
     width: 100%;
-    height: 100%;
-    justify-content: center;
+    height: auto;
     transition: ease .5s;
     z-index: 1;
     &--scrolled {

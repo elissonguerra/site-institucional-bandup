@@ -1,0 +1,470 @@
+header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .50s ease;
+    background-color: black;
+}
+
+.menu{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 2000px;
+    height: 80px;
+    z-index: 3;
+    background-color: black;
+}
+
+.menu-items ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-items a {
+    color: white;
+    padding: 5px 0;
+    margin: 0 10px;
+    transition: all .50s ease;
+    text-decoration: none;
+}
+
+.menu-items a:hover {
+    color: rgb(173, 169, 169);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 1400px) {
+    header {
+        transition: .2s;
+    }
+
+    .menu-items a {
+        padding: 5px 0;
+    }
+
+    .texto-header h1{
+        font-size: 6vw;
+    }
+
+    .texto-header p{
+        font-size: 3vw;
+    }
+
+}
+
+@media (max-width: 1090px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .troca-lang {
+        margin-right: .7rem;
+    }
+
+    .menu-items {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: auto;
+        height: auto;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .menu-items ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-items a {
+        display: block;
+        padding: 10px 25px;
+        transition: all .50s ease;
+        font-size: 2.5vw;
+    }
+
+    .menu-items a:hover {
+        color: rgb(173, 169, 169);
+        transform: translateY(5px);
+    }
+
+    .menu-items.aberto {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1rem;
+    background-color: black;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.estrelas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    pointer-events: none;
+}
+
+.estrelas span {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin: 0 1vw;
+    border-radius: 100%;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(400s / var(--i));
+    opacity: .5;
+    z-index: 0;
+    background-color: white;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-80vh) scale(1);
+    }
+}
+
+.efeito-fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+
+.efeito-fadeIn--visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#logo {
+    width: 8rem;
+    cursor: pointer;
+}
+
+.troca-lang {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-lang {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: auto;
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.dropdown-lang a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 15px;
+    margin: 5px 5px;
+    transition: all .50s ease;
+    font-size: 1.5vw;
+}
+
+.dropdown-lang a:hover {
+    color: rgb(173, 169, 169);
+    transform: translateY(5px);
+}
+
+.dropdown-lang.aberto {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.troca-lang img {
+    height: auto;
+    width: 30px;
+    cursor: pointer;
+}
+
+#selected-lang {
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+#span-b2b {
+    color: yellow;
+}
+
+.imagem-header {
+    background-image: url('~/img/teste-banner.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    animation: flutuar 2s infinite alternate;
+}
+
+@media (min-width: 768px) {
+    .texto-header {
+        padding-left: 5rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+    }
+}
+
+@media (min-width: 1400px) {
+    .texto-header h1 {
+        font-size: 6rem;
+    }
+
+    .texto-header p {
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.titulo-principal {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw;
+    text-align: center;
+    z-index: 1;
+}
+
+.titulo-principal h1 {
+    text-transform: uppercase;
+    background-color: #D1DB58;
+    padding: 1rem 5rem;
+    font-size: 22pt;
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    z-index: 1;
+}
+
+.primeiro-bloco {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 10vw 3rem 0;
+}
+
+.imagem-lateral {
+    width: 50%;
+    height: auto;
+    z-index: 1;
+}
+
+.imagem-lateral img {
+    width: auto;
+    border-radius: 0 2rem 2rem 0;
+    height: 30vw;
+}
+
+.texto-lateral {
+    width: 40%;
+    height: auto;
+    text-align: center;
+    z-index: 1;
+}
+
+.parallax {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('~/img/ilustra-pb.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.parallax-conteudo {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 10rem 0 10rem 0;
+    width: 80%;
+}
+
+.segundo-bloco {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.segundoBloco-txt {
+    width: 100%;
+    text-align: center;
+    padding: 10vw;
+    z-index: 1;
+}
+
+main h1 {
+    padding-bottom: 1rem;
+    color: white;
+    font-size: 20pt;
+}
+
+main p {
+    font-size: 15pt;
+    color: white;
+}
+
+#titulo-principal {
+    color: black;
+}
+
+@media (max-width: 991.5px) {
+    main p {
+        font-size: 2vw;
+    }
+
+    main h1 {
+        font-size: 3vw;
+    }
+
+    .texto-lateral {
+        width: 40%;
+    }
+
+    .parallax-conteudo {
+        padding: 5rem 0 5rem 0;
+    }
+
+    .segundoBloco-txt {
+        width: 80%;
+        text-align: center;
+        padding: 5rem 0 5rem 0;
+    }
+
+    .titulo-principal h1 {
+        font-size: 2.6vw;
+    }
+
+    .estrelas span {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .texto-lateral {
+        width: 40%;
+    }
+
+    .titulo-principal h1 {
+        font-size: 3vw;
+    }
+
+    .estrelas span {
+        width: 5px;
+        height: 5px;
+    }
+
+    .imagem-lateral {
+        display: none;
+    }
+
+    .primeiro-bloco {
+        justify-content: center;
+        padding: 3rem 0;
+        }
+
+        .texto-header {
+            text-align: center;
+        }
+
+        .texto-header h1 {
+            font-size: 8vw;
+        }
+
+        .imagem-header {
+            justify-content: center;
+        }
+}

@@ -1,0 +1,112 @@
+@{
+    ViewData["Title"] = "TrabalheConosco";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/trabalheConosco.css">
+}
+
+@section Scripts {
+    <script src="~/js/trabalheConosco.js"></script>
+}
+
+<partial name="_Header"></partial>
+
+<div class="container-geral">
+    <div class="form-image">
+        <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+    </div>
+    <div class="container-tc">
+        <div class="form">
+            <form action="#" id="formulario">
+
+                <div class="intro">
+                    <p>Faça parte da nossa equipe! Buscamos pessoas talentosas, apaixonadas e dispostas a crescer em um ambiente colaborativo e dinâmico. Se você procura novos desafios e oportunidades de desenvolvimento profissional, venha construir conosco o futuro da nossa empresa. Confira nossas vagas e faça parte dessa jornada!</p>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="name">Nome Completo</label>
+                        <input id="name" type="text" name="name" placeholder="Digite o nome completo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="tipo-vaga">Tipo de Vaga</label>
+                        <div class="dropdown">
+                            <button class="dropbtn" id="dropdownButton">Selecione a Vaga</button>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="selectOption('Selecione a vaga')">Selecione a Vaga</a>
+                                <a href="#" onclick="selectOption('T.I')">T.I</a>
+                                <a href="#" onclick="selectOption('Criação')">Criação</a>
+                                <a href="#" onclick="selectOption('Estágio')">Estágio</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-box big-box">
+                        <label for="objective">Objetivos</label>
+                        <textarea class="input-size" name="objective" id="objective" cols="30" rows="10" placeholder="Informe seus objetivos" required></textarea>
+                    </div>
+
+                    <div class="input-box big-box">
+                        <label for="confirmPassword">Experiências</label>
+                        <textarea class="input-size" name="experience" id="experience" cols="30" rows="10" placeholder="Informe suas experiências" required></textarea>
+                    </div>
+
+
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input id="female" type="radio" name="gender">
+                            <label for="female">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="male" type="radio" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="others" type="radio" name="gender">
+                            <label for="others">Outros</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input id="none" type="radio" name="gender">
+                            <label for="none">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-load">
+                    <p>Se prefirir, você pode optar por carregar o seu currículo pronto abaixo:</p>
+                </div>
+                    <div class="input-box">
+                        <label for="file-upload">Carregar Arquivo</label>
+                        <input type="file" id="file-upload" class="upload-box">
+                    </div>
+
+                <div class="continue-button">
+                    <button><a href="#">Continuar</a> </button>
+                </div>
+            </form>
+            <p id="mensagemErro" style="color: red; display: none;"></p>
+        </div>
+    </div>
+</div>

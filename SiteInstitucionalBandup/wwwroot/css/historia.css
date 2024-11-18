@@ -1,0 +1,309 @@
+
+.header-img {
+    height: 100vh;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+
+#historia-main {
+    background-color: black;
+}
+
+/* ESTILO DA SEÇÃO APRESENTACAO */
+.apresentacao {
+    height: auto;
+    width: 100%;
+    background-color: #EBEBEB;
+    padding-bottom: 5%;
+    padding-left: 1rem;
+}
+
+.apresentacao-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+
+.apresentacao-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.apresentacao-txt {
+    height: auto;
+    width: 40%;
+    font-size: 2rem;
+}
+
+.card-dog {
+    border-radius: 30rem 0 0 30rem;
+    display: flex;
+    height: auto;
+    width: 40%;
+    background-color: yellow;
+    padding-left: 1rem;
+}
+
+.card-dog img {
+    width: 15%;        
+    height: auto;       
+    max-height: 150px;  
+}
+
+.apresentacao-img img {
+    width: 50%;
+    height: auto;
+}
+
+@media (min-width: 2000px) {
+    .card-dog img {
+        width: auto;     
+        height: 150px;   
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 750px) {
+   .apresentacao-content {
+        flex-direction: column;
+   }
+   
+   .apresentacao-txt {
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 80%;
+        font-size: 1.2rem;
+   }
+
+   .card-dog {
+        border-radius: 30rem;
+        justify-content: center;
+   }
+
+   .card-dog img {
+        width: 30%;
+        height: auto;
+   }
+}
+
+
+/* FIM DO ESTILO DA SEÇÃO APRESENTACAO */
+
+
+
+/* ESTILO DA SEÇÃO CONTEUDO-PRINCIPAL */
+/* ESTILO DA DIV BLOCO-TEXTO */
+.conteudo-principal {
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+}
+
+.bloco-texto {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.texto-principal {
+    width: 40%;
+    height: auto;
+    text-align: start;
+    color: white;
+    font-size: 2rem;
+}
+
+.titulo-principal {
+    font-family: Arial, sans-serif;  
+    font-weight: bold;               
+    font-size: 5rem;                 
+    line-height: 1.2;                
+    text-transform: uppercase;       
+    max-width: 100%;                 
+    display: flex;                   
+    flex-direction: column;         
+    align-items: flex-end;        
+}
+
+.titulo-principal span {
+    display: block;                  
+    background-color: yellow;         
+    padding: 5px 10px;               
+    margin-bottom: 5px;               
+    box-sizing: border-box;           
+    text-align: left;               
+    width: max-content;              
+}
+
+
+@media (max-width: 1500px) {
+    .titulo-principal {
+        font-size: 4rem;           
+    }
+}
+
+@media (max-width: 1260px) {
+    .titulo-principal {
+        font-size: 3.5rem;           
+    }
+}
+
+@media (max-width: 1130px) {
+    .titulo-principal {
+        font-size: 3rem;           
+    }
+}
+
+@media (max-width: 1012px) {
+    .titulo-principal {
+        font-size: 2.5rem;           
+    }
+}
+
+@media (max-width: 866px) {
+    .titulo-principal {
+        font-size: 2rem;        
+    }
+}
+
+/* FIM DO ESTILO DA DIV BLOCO-TEXTO */
+
+/* ESTILO DA DIV VISITA */
+.visita {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.visita-img {
+    width: 40%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visita-txt {
+    width: 40%;
+    height: auto;
+    text-align: end;
+    color: white;
+    font-size: 2rem;
+}
+
+.visita-img img {
+    width: 100%;
+}
+
+#visitaTxt1 {
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 650px) {
+    .bloco-texto {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .texto-principal {
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 80%;
+    }
+
+    .titulo-principal {
+        align-items: center; 
+    }
+
+    .titulo-principal span {
+        text-align: center;
+    }
+
+    .visita {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .visita-txt {
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 430px) {
+    .titulo-principal {
+        font-size: 2rem;
+    }
+}
+
+
+/* FIM DO ESTILO DA DIV VISITA */
+
+/* RESPONSIVIDADE DE TEXTOS */
+@media (max-width: 1500px) {
+    #historiaMain h1 {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        padding-bottom: 0.5rem;
+    }
+
+    #historiaMain p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1260px) {
+    #historiaMain h1 {
+        font-size: 2.2rem;
+    }
+
+    #historiaMain p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1130px) {
+    #historiaMain h1 {
+        font-size: 2rem;
+    }
+
+    #historiaMain p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1012px) {
+    #historiaMain h1 {
+        font-size: 1.7rem;
+    }
+
+    #historiaMain p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 866px) {
+    #historiaMain h1 {
+        font-size: 1.1rem;
+    }
+
+     #historiaMain p {
+        font-size: .8rem;
+    }
+}

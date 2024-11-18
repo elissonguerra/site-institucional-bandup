@@ -33,6 +33,22 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult TrabalheConosco()
+    {
+        return View();
+    }
+
+    public IActionResult Lojas()
+    {
+        return View();
+    }
+
+    public IActionResult Historia()
+    {
+        return View();
+    }
+
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

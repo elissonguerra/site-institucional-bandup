@@ -1,19 +1,28 @@
 @{
-    ViewData["Title"] = "Cosmos";
+    Layout = null;
 }
 
-@section Styles {
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/cosmos.css">
-}
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>COSMOS</title>
 
-@section Scripts {
-    <script src="~/js/cosmos.js"></script>
-}
+    <style>
+        
+    </style>
+</head>
 
- <header>
+<body>
+    <header>
         <div class="menu">
             <div class="logo">
-                <a asp-action="Cosmos" asp-controller="Home">
+                <a asp-controller="Home" asp-action="Cosmos">
                     <svg width="180" height="40" viewBox="0 -15 200 60" fill="none" xmlns="http://www.w3.org/2000/svg"
                         id="logo">
                         <path
@@ -40,13 +49,13 @@
     
             <div class="menu-items">
                 <ul>
-                    <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                    <li><a href="#" target="_blank" id="menuTC">Trabalhe Conosco</a></li>
-                    <li><a href="#" target="_blank" id="menuLojas">Lojas</a></li>
-                    <li><a href="#" target="_blank" id="menuMarcas">Marcas</a></li>
-                    <li><a href="#" target="_blank" id="menuEventos">Eventos</a></li>
-                    <li><a href="#" target="_blank" id="menuHistoria">História</a></li>
-                    <li><a href="#" target="_blank">Cosmos</a></li>
+                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-controller="Home" asp-action="TrabalheConosco" id="menuTC">Trabalhe Conosco</a></li>
+                    <li><a asp-controller="Home" asp-action="Lojas" id="menuLojas">Lojas</a></li>
+                    <li><a asp-controller="Home" asp-action="Marcas" id="menuMarcas">Marcas</a></li>
+                    <li><a asp-controller="Home" asp-action="Eventos" id="menuEventos">Eventos</a></li>
+                    <li><a asp-controller="Home" asp-action="Historia" id="menuHistoria">História</a></li>
+                    <li><a asp-controller="Home" asp-action="Cosmos">Cosmos</a></li>
                     <li><a href="https://api.whatsapp.com/send/?phone=5514996639382&text&type=phone_number&app_absent=0" target="_blank" id="menuB2B">Seja um cliente <span id="span-b2b">B2B</span></a></li>
                 </ul>
             </div>
@@ -249,9 +258,67 @@
                         para resultados, o grupo está comprometido em alcançar a excelência operacional e moldar o
                         futuro do mercado.</p>
                 </div><!--FIM DA DIV SEGUNDOBLOCO-TXT-->
-            </div><!--FIM DA DIV SEGUNDO-BLOCO-->]
+            </div><!--FIM DA DIV SEGUNDO-BLOCO-->
         </div>
     </main>
+
+    <footer>
+        <div id="footer-content">
+            <div class="left-footer">
+                <img class="logo-footer" src="~/img/bandup-logo-footer.png" alt="bandup-logo">
+                <div class="social-icon">
+                    <a href="#"><img src="~/img/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="~/img/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="~/img/x-icon.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="center-footer">
+                <div class="content-footer-menu">
+                    <p><a href="#">Home</a></p>
+                    <p><a asp-controller="Home" asp-action="Index"></a>Marcas</a></p>
+                    <p><a href="#">Nossas lojas</a></p>
+                    <p><a href="#">Eventos</a></p>
+                    <p><a href="#">Seja um cliente B2B</a></p>
+                    <p><a href="#">Conheça o grupo Cosmos</a></p>
+                    <p><a asp-controller="Home" asp-action="TrabalheConosco">Trabalhe conosco</a></p>
+                    <p><a asp-controller="Home" asp-action="Historia">Nossa Historia</a></p>
+                    <p><a href="#">Fale conosco</a></p>
+                </div>
+                <div class="content-footer-menu">
+                    <p class="bold-txt">Lojas Oficiais</p>
+                    <p><a href="#">Loja DC Comics</a></p>
+                    <p><a href="#">Loja Warner Bros</a></p>
+                    <p><a href="#">CN Shop</a></p>
+                    <p><a href="#">Shop Harry Potter</a></p>
+                    <p><a href="#">HBO Shop</a></p>
+                    <p><a href="#">Lojinha da Mõnica</a></p>
+                    <p><a href="#">Fresno Shop</a></p>
+                </div>
+            </div>
+            <div class="newletter">
+                <div class="NLtxt">
+                    <p class="poppins-bold">RECEBA NOSSAS NOVIDADES</p>
+                    <p class="poppins-regular">Fique por dentro dos últimos<br>lançamentos do mundo Geek!</p>
+                </div>
+                <form class="input-txt" action="#">
+                    <input class="input-box" type="text" id="fname" name="fname" placeholder="Nome">
+                    <input class="input-box" type="text" id="lname" name="lname" placeholder="E-mail">
+                    <input class="button" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="legal-line">
+            <h2 class="lang-txt" style="color: white;">
+                Fan Store Entretenimento S.A. - bandUP! - Av. Pedro Ometto, 1570 - Vila Narcisa -
+                17340-212 - Barra Bonita (SP) - CNPJ: 01.424.397/0001-01 - Inscricao Estadual: 202.032.630.110
+            </h2>
+        </div>
+    </footer>
+
+    <script src="~/js/cosmos.js"></script>
+</body>
+
+</html>
 
 
 

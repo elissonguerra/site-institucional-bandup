@@ -11,7 +11,7 @@
             objetivosTexto: 'O Grupo Cosmos visa promover a sinergia entre as empresas Piticas e BandUP para expandir os negócios, diversificar a oferta de produtos, promover a inovação colaborativa e impulsionar o crescimento sustentável a longo prazo. Com uma abordagem estratégica e orientada para resultados, o grupo está comprometido em alcançar a excelência operacional e moldar o futuro do mercado.',
             ancoraTC: 'Trabalhe Conosco',
             ancoraLojas: 'Lojas',
-            ancoraMarcas: 'aMarcas',
+            ancoraMarcas: 'Marcas',
             ancoraEventos: 'Eventos',
             ancoraHistoria: 'Nossa História',
             ancoraB2B: 'Seja um cliente B2B',

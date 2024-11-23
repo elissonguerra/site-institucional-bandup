@@ -113,3 +113,4 @@ containerWrapper.addEventListener('touchend', () => {
         moverContainer(-1);
     }
 });
+

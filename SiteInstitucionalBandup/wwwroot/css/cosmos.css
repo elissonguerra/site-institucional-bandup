@@ -87,6 +87,7 @@ header {
 
     .texto-header p{
         font-size: 3vw;
+        color: white;
     }
 
 }
@@ -459,6 +460,10 @@ main p {
         width: 40%;
     }
 
+    #titulo.abertura {
+        color: white;
+    }
+
     .titulo-principal h1 {
         font-size: 3vw;
     }
@@ -483,6 +488,7 @@ main p {
 
         .texto-header h1 {
             font-size: 8vw;
+            color: white;
         }
 
         .imagem-header {

@@ -1,16 +1,20 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SiteInstitucionalBandup.Models;
+using SiteInstitucionalBandup.Data;
+
 
 namespace SiteInstitucionalBandup.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
@@ -18,9 +22,10 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Marcas()
+   public IActionResult Marcas()
     {
-        return View();
+        var marcas = _context.Marcas.ToList();
+        return View(marcas);
     }
 
     public IActionResult Cosmos()

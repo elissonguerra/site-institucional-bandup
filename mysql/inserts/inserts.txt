@@ -1,0 +1,10 @@
+INSERT INTO Marcas (Id, NomeMarca, Descricao, Imagem)
+VALUES
+(1, 'Warner Bros', 'Descubra o universo diversificado da Warner Bros, líder global em entretenimento com um portfólio invejável de propriedades intelectuais.', 'https://www.apple.com/v/iphone/home/bx/images/overview/consider/camera__exi2qfijti0y_large.jpg'),
+(2, 'DC Comics', 'Explore o universo diversificado da DC Comics, líder global em entretenimento com um portfólio invejável de super-heróis.', 'https://www.apple.com/v/iphone/home/bx/images/overview/consider/innovation__os9bmmo3mjee_xlarge.jpg'),
+(3, 'Disney', 'Explore o vasto universo da Disney, líder global em entretenimento com um portfólio excepcional de propriedades intelectuais.', 'https://www.apple.com/v/iphone/home/bx/images/overview/consider/camera__exi2qfijti0y_large.jpg'),
+(4, 'Marvel', 'Explore o vasto universo da Marvel, líder global em entretenimento com histórias épicas de super-heróis.', 'https://www.apple.com/v/iphone/home/bx/images/overview/consider/camera__exi2qfijti0y_large.jpg'),
+(5, 'Turma da Mônica', 'Explore o universo da Turma da Mônica, um ícone brasileiro em entretenimento com personagens inesquecíveis.', 'https://www.apple.com/v/iphone/home/bx/images/overview/consider/camera__exi2qfijti0y_large.jpg'),
+(6, 'Cartoon Network', 'Explore o universo da Cartoon Network, conhecido por animações icônicas e histórias memoráveis.', 'https://www.apple.com/v/iphone/home/bx/images/overview/consider/camera__exi2qfijti0y_large.jpg'),
+(7, 'Pixar', 'A Pixar é um estúdio de animação renomado por filmes como "Toy Story", "Procurando Nemo" e "Os Incríveis".', 'https://www.apple.com/v/iphone/home/bx/images/overview/consider/camera__exi2qfijti0y_large.jpg'),
+(8, 'One Piece', 'One Piece é uma série de anime e mangá aclamada mundialmente por suas aventuras piratas.', 'https://www.apple.com/v/iphone/home/bx/images/overview/consider/camera__exi2qfijti0y_large.jpg');

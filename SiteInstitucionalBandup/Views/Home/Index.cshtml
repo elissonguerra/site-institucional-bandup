@@ -1,9 +1,222 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-<partial name="_Header"></partial>
-<main>
-    <div class="text-center">
-    </div>
-</main>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bandUP! - Institucional</title>
+    <link rel="stylesheet" href="~/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="header-slide-menu">
+            <div class="header-slide">
+            <div class="menu">
+                <div class="left-menu-slide">
+                    <img class="logo-menu-slide" src="~/img/bandup-logo-footer.png" alt="bandup-logo">
+                </div>
+                <div class="middle-menu">
+                    <p><a asp-controller="Home" asp-action="Index">Home</a></p>
+                    <p><a asp-controller="Home" asp-action="Marcas">Marcas</a></p>
+                    <p><a asp-controller="Home" asp-action="Lojas">Nossas lojas</a></p>
+                    <p><a  asp-controller="Home" asp-action="Eventos">Eventos</a></p>
+                    <p><a href="#">Seja um cliente <span class="yellow-txt">B2B</span></a></p>
+                </div>
+                <div class="right-menu">
+                    <div class="menu-lang">
+                        <div class="planet-icon">
+                            <img src="~/img/planet-lang.svg" alt="idioma">
+                        </div>
+                        <div class="lang-txt">
+                            <span class="lang-atual">PT_BR</span>
+                            <i class="fa-solid fa-caret-down fa-sm"></i>
+                            <div class="menuaberto-lang">
+                                <ul>
+                                    <li>
+                                        <span>EN</span>
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <span>BR</span>
+                                        <p>Português</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-bar" tabindex="0">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <div class="menuaberto">
+                            <div class="menu-text-right">
+                                <p><a asp-controller="Home" asp-action="Index">Home</a></p>
+                                <p><a asp-controller="Home" asp-action="Marcas">Marcas</a></p>
+                                <p><a asp-controller="Home" asp-action="Lojas">Nossas lojas</a></p>
+                                <p><a asp-controller="Home" asp-action="Eventos">Eventos</a></p>
+                                <p><a href="#">Seja um cliente <span class="yellow-txt">B2B</span></a></p>
+                                <div class="lang-inside-menu">
+                                    <div class="planet-icon">
+                                        <img src="~/img/planet-lang.svg" alt="idioma">
+                                    </div>
+                                    <a href="#"><span>EN</span></a>
+                                    <a href="#"><span>PT-BR</span></a>
+                                </div>
+                            </div>
+                            <span class="line-menu"></span>
+                            <p><a asp-controller="Home" asp-action="Cosmos">Conheça o grupo <img class="~/img-cosmos-menu" src="~/img/cosmos.png" alt=""></a></p>
+                            <p><a asp-controller="Home" asp-action="Historia">Nossa história</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="mouse-icon">
+            <div class="mouse-roll">
+                <img src="~/img/mouse-icon.png" alt="Role para ver mais">
+                <p>Role para ver mais</p>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-text">
+                <h2>USE VISTA& VIVA\o/</h2>
+            </div>
+        </div>
+        <div class="banner-content">
+            <div class="scrollingText">
+                <div class="scrollingText_fan">
+                    <div class="textFAN_title">
+                        <h3 class="textFAN">MAIS DO QUE CLIENTES,<br>NÓS TEMOS <span>FÃS!</span></h3>
+                    </div>
+                    <div class="textFAN_description">
+                        <p>Isso nos motiva desde 2010!
+                        <p>A bandUP é uma startup criada por e para pessoas apaixonadas<br>por Música e Cultura Pop, Artistas e Super-Heróis, Games e Quadrinhos,<br>Filmes, TV e qualquer outra forma de entretenimento que emocione. <a href="#">Saiba mais.</a> </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <video class="video-home" autoplay muted loop src="~/img/video_teste_exemple.mp4" type="video/mp4" poster="#"></video>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="content-wrapper">
+                <p>Conheça as marcas que trabalhamos!</p>
+                <a href="#" target="_blank">
+                    <div class="wrapper">
+                        <div class="item item1"></div>
+                        <div class="item item2"></div>
+                        <div class="item item3"></div>
+                        <div class="item item4"></div>
+                        <div class="item item5"></div>
+                        <div class="item item6"></div>
+                        <div class="item item7"></div>
+                        <div class="item item8"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="eventos">
+            <div class="blocos-eventos">
+                <p>Mergulhe no mundo das Pop-up!</p>
+                <div class="slide-eventos">
+                    <div class="evento fade">
+                        <p>1</p>
+                    </div>
+                    <div class="evento fade">
+                        <p>2</p>
+                    </div>
+                    <div class="evento fade">
+                        <p>3</p>
+                    </div>
+                    <div class="evento fade">
+                        <p>4</p>
+                    </div>
+                    <div class="evento fade">
+                        <p>5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="message">
+                <div class="message-content">
+                    <img class="video-bob-piticao" src="~/img/bob_piticao_cel.gif" alt="">
+                    <div class="message-description">
+                        <p>De fã para herói: Explore o Universo<br>das Marcas Que Você Ama!</p>
+                        <p>Produtos licenciados exclusivos que tornam suas histórias ainda mais reais!<br>Use, Vista e Viva \o/ </p>
+                        <button type="submit">Descubra Produtos Exclusivos</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cosmos">
+                <img src="~/img/banner_cosmos_02.jpg" alt="banner_cosmos">
+            </div>
+    </main>
+    <footer>
+        <div id="footer-content">
+            <div class="left-footer">
+                <img class="logo-footer" src="~/img/bandup-logo-footer.png" alt="bandup-logo">
+                <div class="social-icon">
+                    <a href="#"><img src="~/img/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="~/img/instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="~/img/x-icon.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="center-footer">
+                <div class="content-footer-menu">
+                    <p><a asp-controller="Home" asp-action="Index">Home</a></p>
+                    <p><a asp-controller="Home" asp-action="Marcas">Marcas</a></p>
+                    <p><a asp-controller="Home" asp-action="Lojas">Nossas lojas</a></p>
+                    <p><a  asp-controller="Home" asp-action="Eventos">Eventos</a></p>
+                    <p><a href="https://api.whatsapp.com/send/?phone=5514996639382&text&type=phone_number&app_absent=0">Seja um cliente B2B</a></p>
+                    <p><a asp-controller="Home" asp-action="Cosmos">Conheça o grupo Cosmos</a></p>
+                    <p><a asp-controller="Home" asp-action="Historia">Nossa Historia</a></p>
+                    <p><a href="https://api.whatsapp.com/send/?phone=5514996639382&text&type=phone_number&app_absent=0">Fale conosco</a></p>
+                </div>
+                <div class="content-footer-menu">
+                    <p class="bold-txt">Lojas Oficiais</p>
+                    <p><a href="#">Loja DC Comics</a></p>
+                    <p><a href="#">Loja Warner Bros</a></p>
+                    <p><a href="#">CN Shop</a></p>
+                    <p><a href="#">Shop Harry Potter</a></p>
+                    <p><a href="#">HBO Shop</a></p>
+                    <p><a href="#">Lojinha da Mõnica</a></p>
+                    <p><a href="#">Fresno Shop</a></p>
+                </div>
+            </div>
+            <div class="newletter">
+                <div class="NLtxt">
+                    <p class="poppins-bold">RECEBA NOSSAS NOVIDADES</p>
+                    <p class="poppins-regular">Fique por dentro dos últimos<br>lançamentos do mundo Geek!</p>
+                </div>
+                <form class="input-txt" action="#">
+                    <input class="input-box" type="text" id="fname" name="fname" placeholder="Nome">
+                    <input class="input-box" type="text" id="lname" name="lname" placeholder="E-mail">
+                    <input class="button" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="legal-line">
+            <h2 class="lang-txt" style="color: white;">
+                Fan Store Entretenimento S.A. - bandUP! - Av. Pedro Ometto, 1570 - Vila Narcisa -
+                17340-212 - Barra Bonita (SP) - CNPJ: 01.424.397/0001-01 - Inscricao Estadual: 202.032.630.110
+            </h2>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=32"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.5.2/smooth-scrollbar.js"></script>
+    <script src="~/js/home.js"></script>
+</body>
+
+</html>

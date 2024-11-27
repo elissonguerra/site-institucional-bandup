@@ -43,6 +43,7 @@ svg {
   padding-top: .5rem;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: #212529 !important;
   /* Scrollable contents if viewport is shorter than content. */
 }
 
@@ -55,15 +56,11 @@ svg {
 
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
-}
-
-.sidebar .nav-link.active {
-  color: #ff2a00;
+  color: white;
 }
 
 .sidebar .nav-link:hover {
-  color: #b30000;
+  color: #88898a;
 }
 
 .sidebar-heading {
@@ -144,3 +141,11 @@ svg {
   width: 70%!important;
 }
 
+.card-hover:hover {
+  transform: scale(1.03); 
+  transition: all .3s ease;
+}
+
+.card-hover {
+  transition: all 0.3s ease; 
+}

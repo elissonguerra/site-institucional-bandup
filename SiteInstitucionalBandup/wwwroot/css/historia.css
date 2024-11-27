@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 .header-img {
     height: 100vh;
@@ -7,7 +10,7 @@
 
 
 #historia-main {
-    background-color: black;
+    background-color: #EBEBEB;
 }
 
 /* ESTILO DA SEÇÃO APRESENTACAO */
@@ -45,6 +48,7 @@
 .card-dog {
     border-radius: 30rem 0 0 30rem;
     display: flex;
+    align-items: center;
     height: auto;
     width: 40%;
     background-color: yellow;
@@ -52,9 +56,9 @@
 }
 
 .card-dog img {
-    width: 15%;        
+    width: 30%;        
     height: auto;       
-    max-height: 150px;  
+
 }
 
 .apresentacao-img img {
@@ -104,6 +108,7 @@
     width: 100%;
     height: auto;
     padding-top: 2rem;
+    background-color: black;
 }
 
 .bloco-texto {
@@ -306,4 +311,17 @@
      #historiaMain p {
         font-size: .8rem;
     }
+}
+
+.apresentacao-txt, .texto-principal, .visita-txt {
+    font-size: 20pt;
+}
+
+#historia-main {
+    font-family: 'Fredoka', sans-serif;
+}
+
+#historia-main h1 {
+    padding-bottom: 1rem;
+    font-family: 'Noto-Sans', sans-serif;
 }

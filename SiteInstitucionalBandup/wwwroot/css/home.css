@@ -13,6 +13,7 @@ html,body{
     width: 100%;
     height: 100%;
     scrollbar-width: thin;
+    margin: auto;
 }
 
 header{
@@ -60,6 +61,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .banner-text h2{
@@ -344,10 +346,9 @@ main{
     display: flex;
     position: fixed;
     width: 100%;
-    height: 100%;
     justify-content: center;
     transition: ease .5s;
-    z-index: 1;
+    z-index: 100;
     &--scrolled {
         height: 40px;
       }
@@ -510,29 +511,93 @@ input::placeholder{
 
 /* EVENTOS */
 
-.blocos-eventos{
+.eventos{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     gap: 20px;
 }
 
-.slide-eventos{
-    display: flex;
-    width: 100%;
-    max-width: 2000px;
-    height: 768px;
-    background-color: crimson;
-}
-
-.blocos-eventos p{
+.eventos p{
     font-family: "Fredoka", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size: 25pt;
-    color: #1f1f1f;
+    font-size: 20pt;
+    color: #0D0D0D;
+}
+
+.blocos-eventos{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 2000px;
+    height: 750px;
+}
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-event{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+}
+
+.event-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 20%;
+    padding-bottom: 70px;
+    gap: 5px;
+}
+
+.event-txt h3{
+    font-size: 15pt; 
+}
+
+.event-txt p, h3{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: #ffffff;
+    font-size: 27pt; 
+    text-align: start;
+}
+
+.event-txt button{
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 
@@ -545,7 +610,7 @@ input::placeholder{
     height: auto;
     padding: 20px;
     gap: 20px;
-    background: url(img/banner_pattern.png), rgba(255, 255, 255, .8) no-repeat center center fixed;;
+    background: url(../img/banner_pattern.png), rgba(255, 255, 255, .8) no-repeat center center fixed;;
     background-size: cover;
     background-blend-mode: lighten;
 }
@@ -724,48 +789,66 @@ input::placeholder{
 .item{
     width: 200px;
     height: 100px;
-    background-color: chocolate;
     border-radius: 6px;
     position: absolute;
-    left: max(calc(200px * 8), 100%);
+    left: max(calc(200px * 12), 100%);
     animation-name: scrollLeft;
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-delay: -25s;
+
 }
 
 .item1{
-    animation-delay: calc(30s / 8 * (8 - 1) * -1);
+    animation-delay: calc(30s / 12 * (12 - 1) * -1);
 }
 
 .item2{
-    animation-delay: calc(30s / 8 * (8 - 2) * -1);
+    animation-delay: calc(30s / 12 * (12 - 2) * -1);
 }
 
 .item3{
-    animation-delay: calc(30s / 8 * (8 - 3) * -1);
+    animation-delay: calc(30s / 12 * (12 - 3) * -1);
 }
 
 .item4{
-    animation-delay: calc(30s / 8 * (8 - 4) * -1);
+    animation-delay: calc(30s / 12 * (12 - 4) * -1);
 }
 
 .item5{
-    animation-delay: calc(30s / 8 * (8 - 5) * -1);
+    animation-delay: calc(30s / 12 * (12 - 5) * -1);
 }
 
 .item6{
-    animation-delay: calc(30s / 8 * (8 - 6) * -1);
+    animation-delay: calc(30s / 12 * (12 - 6) * -1);
 }
 
 .item7{
-    animation-delay: calc(30s / 8 * (8 - 7) * -1);
+    animation-delay: calc(30s / 12 * (12 - 7) * -1);
 }
 
 .item8{
-    animation-delay: calc(30s / 8 * (8 - 8) * -1);
+    animation-delay: calc(30s / 12 * (12 - 8) * -1);
 }
+
+.item9{
+    animation-delay: calc(30s / 12 * (12 - 9) * -1);
+}
+
+.item10{
+    animation-delay: calc(30s / 12 * (12 - 10) * -1);
+}
+
+.item11{
+    animation-delay: calc(30s / 12 * (12 - 11) * -1);
+}
+
+.item12{
+    animation-delay: calc(30s / 12 * (12 - 12) * -1);
+}
+
+
 
 /* END - Infinite scroll brands */
 

@@ -1,64 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-.header-img {
-    height: 100vh;
-    width: 100%;
-    background-color: antiquewhite;
+#historia-main {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
+.header-img{
+    display: flex;
+}
 
-#historia-main {
-    background-color: #EBEBEB;
+.header-img img {
+    height: auto;
+    width: 100%;
+    max-width: 2000px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 /* ESTILO DA SEÇÃO APRESENTACAO */
 .apresentacao {
+    display: flex;
     height: auto;
     width: 100%;
     background-color: #EBEBEB;
-    padding-bottom: 5%;
-    padding-left: 1rem;
 }
 
-.apresentacao-img {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    margin-top: 5%;
-}
 
 .apresentacao-content {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 5%;
+    margin: 90px;
 }
 
 .apresentacao-txt {
     height: auto;
-    width: 40%;
-    font-size: 2rem;
+    max-width: 700px;
+    font-size: 22pt;
+    margin: 20px;
 }
 
 .card-dog {
-    border-radius: 30rem 0 0 30rem;
     display: flex;
-    align-items: center;
-    height: auto;
-    width: 40%;
-    background-color: yellow;
-    padding-left: 1rem;
+
 }
 
 .card-dog img {
-    width: 30%;        
-    height: auto;       
-
+    height: auto;
+    width: 100%;
+    min-width: 200px;
 }
 
 .apresentacao-img img {
@@ -66,13 +59,6 @@
     height: auto;
 }
 
-@media (min-width: 2000px) {
-    .card-dog img {
-        width: auto;     
-        height: 150px;   
-        max-width: 100%; 
-    }
-}
 
 @media (max-width: 750px) {
    .apresentacao-content {
@@ -107,26 +93,23 @@
 .conteudo-principal {
     width: 100%;
     height: auto;
-    padding-top: 2rem;
-    background-color: black;
 }
 
 .bloco-texto {
     height: auto;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 100px;
+    background-color: #1e1e1e;
 }
 
 .texto-principal {
-    width: 40%;
     height: auto;
-    text-align: start;
+    text-align: center;
     color: white;
-    font-size: 2rem;
+    font-size: 18pt;
 }
 
 .titulo-principal {
@@ -189,24 +172,28 @@
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    background-color: #EBEBEB;
 }
 
 .visita-img {
-    width: 40%;
+    width: 100%;
+    max-width: 900px;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 20px;
 }
 
 .visita-txt {
     width: 40%;
     height: auto;
-    text-align: end;
-    color: white;
-    font-size: 2rem;
+    text-align: start;
+    color: black;
+    font-size: 15pt;
 }
 
 .visita-img img {
@@ -262,66 +249,54 @@
 
 /* RESPONSIVIDADE DE TEXTOS */
 @media (max-width: 1500px) {
-    #historiaMain h1 {
+    h1 {
         font-size: 2.5rem;
         font-weight: bolder;
         padding-bottom: 0.5rem;
     }
 
-    #historiaMain p {
+    p {
         font-size: 1.5rem;
     }
 }
 
 @media (max-width: 1260px) {
-    #historiaMain h1 {
+    h1 {
         font-size: 2.2rem;
     }
 
-    #historiaMain p {
+    p {
         font-size: 1.2rem;
     }
 }
 
 @media (max-width: 1130px) {
-    #historiaMain h1 {
+    h1 {
         font-size: 2rem;
     }
 
-    #historiaMain p {
+    p {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 1012px) {
-    #historiaMain h1 {
+    h1 {
         font-size: 1.7rem;
     }
 
-    #historiaMain p {
+    p {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 866px) {
-    #historiaMain h1 {
+    h1 {
         font-size: 1.1rem;
     }
 
-     #historiaMain p {
+    p {
         font-size: .8rem;
     }
 }
-
-.apresentacao-txt, .texto-principal, .visita-txt {
-    font-size: 20pt;
-}
-
-#historia-main {
-    font-family: 'Fredoka', sans-serif;
-}
-
-#historia-main h1 {
-    padding-bottom: 1rem;
-    font-family: 'Noto-Sans', sans-serif;
-}
+/* FIM DO ESTILO DA SEÇÃO CONTEUDO-PRINCIPAL */

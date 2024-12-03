@@ -10,9 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bandUP! - Institucional</title>
     <link rel="stylesheet" href="~/css/home.css">
+    <link rel="shortcut icon" href="https://bandupstorehlog.fbitsstatic.net/sf/img/favicon.png?theme=main&v=202410031450
+    " type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
 <body>
@@ -24,11 +27,12 @@
                     <img class="logo-menu-slide" src="~/img/bandup-logo-footer.png" alt="bandup-logo">
                 </div>
                 <div class="middle-menu">
-                    <p><a asp-controller="Home" asp-action="Index">Home</a></p>
+                   <p><a asp-controller="Home" asp-action="Index">Home</a></p>
                     <p><a asp-controller="Home" asp-action="Marcas">Marcas</a></p>
                     <p><a asp-controller="Home" asp-action="Lojas">Nossas lojas</a></p>
-                    <p><a  asp-controller="Home" asp-action="Eventos">Eventos</a></p>
-                    <p><a href="#">Seja um cliente <span class="yellow-txt">B2B</span></a></p>
+                    <p><a asp-controller="Home" asp-action="Eventos">Eventos</a></p>
+                    <p><a asp-controller="Home" asp-action="Cosmos">Cosmos</a></p>
+                    <p><a href="https://api.whatsapp.com/send/?phone=5514996639382&text&type=phone_number&app_absent=0">Seja um cliente <span class="yellow-txt">B2B</span></a></p>
                 </div>
                 <div class="right-menu">
                     <div class="menu-lang">
@@ -58,10 +62,10 @@
                         <span class="bar"></span>
                         <div class="menuaberto">
                             <div class="menu-text-right">
-                                <p><a asp-controller="Home" asp-action="Index">Home</a></p>
-                                <p><a asp-controller="Home" asp-action="Marcas">Marcas</a></p>
-                                <p><a asp-controller="Home" asp-action="Lojas">Nossas lojas</a></p>
-                                <p><a asp-controller="Home" asp-action="Eventos">Eventos</a></p>
+                                <p><a href="#">Home</a></p>
+                                <p><a href="#">Marcas</a></p>
+                                <p><a href="#">Nossas lojas</a></p>
+                                <p><a href="Eventos.htmle">Eventos</a></p>
                                 <p><a href="#">Seja um cliente <span class="yellow-txt">B2B</span></a></p>
                                 <div class="lang-inside-menu">
                                     <div class="planet-icon">
@@ -72,8 +76,9 @@
                                 </div>
                             </div>
                             <span class="line-menu"></span>
-                            <p><a asp-controller="Home" asp-action="Cosmos">Conheça o grupo <img class="~/img-cosmos-menu" src="~/img/cosmos.png" alt=""></a></p>
-                            <p><a asp-controller="Home" asp-action="Historia">Nossa história</a></p>
+                            <p><a href="#">Conheça o grupo <img class="~/img-cosmos-menu" src="~/img/cosmos.png" alt=""></a></p>
+                            <p><a href="#">Trabalhe conosco</a></p>
+                            <p><a href="#">Nossa história</a></p>
                         </div>
                     </div>
                 </div>
@@ -113,37 +118,69 @@
                 <p>Conheça as marcas que trabalhamos!</p>
                 <a href="#" target="_blank">
                     <div class="wrapper">
-                        <div class="item item1"></div>
-                        <div class="item item2"></div>
-                        <div class="item item3"></div>
-                        <div class="item item4"></div>
-                        <div class="item item5"></div>
-                        <div class="item item6"></div>
-                        <div class="item item7"></div>
-                        <div class="item item8"></div>
+                        <div class="item item1"><img src="~/img/logos/CN_LOGO.png" alt=""></div>
+                        <div class="item item2"><img src="~/img/logos/DBZ_LOGO.png" alt=""></div>
+                        <div class="item item3"><img src="~/img/logos/DC_LOGO.png" alt=""></div>
+                        <div class="item item4"><img src="~/img/logos/WB_LOGO.png" alt=""></div>
+                        <div class="item item5"><img src="~/img/logos/FRESNO_LOGO.png" alt=""></div>
+                        <div class="item item6"><img src="~/img/logos/HBO_LOGO.png" alt=""></div>
+                        <div class="item item7"><img src="~/img/logos/HP_LOGO.png" alt=""></div>
+                        <div class="item item8"><img src="~/img/logos/LOTU_LOGO.png" alt=""></div>
+                        <div class="item item9"><img src="~/img/logos/NARUTO_LOGO.png" alt=""></div>
+                        <div class="item item10"><img src="~/img/logos/OP_LOGO.png" alt=""></div>
+                        <div class="item item11"><img src="~/img/logos/DISNEY_LOGO.png" alt=""></div>
+                        <div class="item item12"><img src="~/img/logos/TDM_LOGO.png" alt=""></div>
                     </div>
                 </a>
             </div>
         </div>
         <div class="eventos">
+            <p>Descubra o mundo das Pop-up</p>
             <div class="blocos-eventos">
-                <p>Mergulhe no mundo das Pop-up!</p>
-                <div class="slide-eventos">
-                    <div class="evento fade">
-                        <p>1</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="content-event">
+                            <div class="event-txt">
+                                <h3>BANDUP NA CCXP!</h3>
+                                <p>Da magia ao multiverso: o melhor do entretenimento te espera!</p>
+                                <button type="button">Ver Evento</button>
+                            </div>
+                        </div>
+                        <img src="~/img/CCXP.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="content-event">
+                            <div class="event-txt">
+                                <h3>Barbie The Experience</h3>
+                                <p>Entre no mundo encantado de Barbie. Uma experiência única te espera!</p>
+                                <button type="button">Ver Evento</button>
+                            </div>
+                        </div>
+                        <img src="~/img/BARBIE.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="content-event">
+                            <div class="event-txt">
+                                <h3>Stranger Things: The Experience</h3>
+                                <p>Já pensou em ser protagonista de uma aventura em Stranger Things?</p>
+                                <button type="button">Ver Evento</button>
+                            </div>
+                        </div>
+                        <img src="~/img/Stranger_Things.jpg" alt="">
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="content-event">
+                            <div class="event-txt">
+                                <h3>D23 Brasil - Uma Experiência Disney.</h3>
+                                <p>Momentos inesquecíveis com atrações e novidades imperdíveis!</p>
+                                <button type="button">Ver Evento</button>
+                            </div>
+                        </div>
+                        <img src="~/img/D23.jpg" alt="">
+                      </div>
                     </div>
-                    <div class="evento fade">
-                        <p>2</p>
-                    </div>
-                    <div class="evento fade">
-                        <p>3</p>
-                    </div>
-                    <div class="evento fade">
-                        <p>4</p>
-                    </div>
-                    <div class="evento fade">
-                        <p>5</p>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -161,7 +198,7 @@
                 <img src="~/img/banner_cosmos_02.jpg" alt="banner_cosmos">
             </div>
     </main>
-  <footer>
+   <footer>
         <div id="footer-content">
             <div class="left-footer">
                 <img class="logo-footer" src="~/img/bandup-logo-footer.png" alt="bandup-logo">
@@ -212,7 +249,7 @@
             </h2>
         </div>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=32"></script>

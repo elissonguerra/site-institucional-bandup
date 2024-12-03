@@ -50,3 +50,19 @@ const showAnim = gsap.from('.header-slide-menu', {
   });
 
 // slideshow_home
+
+var swiper = new Swiper(".mySwiper", {
+	centeredSlides: true,
+	autoplay: {
+	  delay: 2500,
+	  disableOnInteraction: false,
+	},
+	effect: 'fade',
+  		fadeEffect: {
+    	crossFade: true
+  },
+	pagination: {
+	  el: ".swiper-pagination",
+	  clickable: true,
+	},
+  });

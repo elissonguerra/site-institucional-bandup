@@ -13,10 +13,12 @@ namespace SiteInstitucionalBandup.Controllers
     public class MarcasController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public MarcasController(AppDbContext context)
+        public MarcasController(AppDbContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         // GET: Marcas
@@ -54,11 +56,19 @@ namespace SiteInstitucionalBandup.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeMarca,Descricao,Imagem")] Marca marca)
+        public async Task<IActionResult> Create([Bind("Id,NomeMarca,Descricao,Imagem")] Marca marca, IFormFile Foto)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(marca);
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(Foto.FileName);
+                string uploads = Path.Combine(_hostEnvironment.WebRootPath, @"img\marcas");
+                string newFile = Path.Combine(uploads, fileName);
+                using (var stream = new FileStream(newFile, FileMode.Create))
+                {
+                    Foto.CopyTo(stream);
+                }
+                marca.Imagem = @"\img\marcas\" + fileName;
+                _context.Marcas.Add(marca);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }

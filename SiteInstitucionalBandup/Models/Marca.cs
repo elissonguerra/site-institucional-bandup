@@ -19,7 +19,6 @@ namespace SiteInstitucionalBandup.Models;
         public string Descricao { get; set; }
 
         [Display(Name = "Imagem")]
-        [Required(ErrorMessage = "Insira a imagem")]
         public string Imagem { get; set; }
         
     }

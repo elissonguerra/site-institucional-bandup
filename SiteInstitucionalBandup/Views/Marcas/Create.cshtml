@@ -11,8 +11,8 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="NomeMarca" class="control-label"></label>
                 <input asp-for="NomeMarca" class="form-control" />
@@ -23,11 +23,11 @@
                 <input asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Imagem" class="control-label"></label>
-                <input asp-for="Imagem" class="form-control" />
-                <span asp-validation-for="Imagem" class="text-danger"></span>
-            </div>
+            <div class="col-sm-12 col-md-5 cursor-pointer">
+                <img src="" id="PreviewImage" class="w-100 rounded-3"/>
+                <input type="hidden" asp-for="Imagem">
+                <input type="file" class="form-control w-100" id="Foto" name="Foto" accept=".jpg,.jpeg,.png,.gif,.jfif" />
+            </div> 
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -39,3 +39,18 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+@section Scripts {
+    <script type="text/javascript">
+
+        window.addEventListener('load', function () {
+            document.querySelector('input[type="file"]').addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    var img = document.getElementById('PreviewImage');
+                    img.src = URL.createObjectURL(this.files[0]);
+                }
+            });
+        });
+
+
+    </script>
+}
